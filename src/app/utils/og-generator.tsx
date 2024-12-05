@@ -11,17 +11,13 @@ export async function GenerateImage(params: {
   title: string;
   description?: string;
 }) {
-  // Fonts
-  const interSemiBold = fetch(
-    new URL("../fonts/Inter-SemiBold.ttf", import.meta.url),
-  ).then((res) => res.arrayBuffer());
-  const interLight = fetch(
-    new URL("../fonts/Inter-Light.ttf", import.meta.url),
+  // Load only one font and use CSS to handle different weights
+  const interFont = fetch(
+    new URL("../fonts/Inter-Light.ttf", import.meta.url)
   ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
     (
-      // ImageResponse JSX element
       <div
         style={{
           fontSize: 160,
@@ -46,31 +42,35 @@ export async function GenerateImage(params: {
             gap: 4,
           }}
         >
-          <span style={{ fontWeight: 600 }}>{params.title}</span>
-          <span style={{ fontSize: 40, fontWeight: 300 }}>
+          <span 
+            style={{ 
+              fontWeight: 600,
+              textShadow: '0 0 1px rgba(255,255,255,0.5)' // Simulate bolder text
+            }}
+          >
+            {params.title}
+          </span>
+          <span 
+            style={{ 
+              fontSize: 40, 
+              fontWeight: 300,
+              opacity: 0.9 // Simulate lighter text
+            }}
+          >
             {params.description}
           </span>
         </div>
       </div>
     ),
-    // ImageResponse options
     {
-      // For convenience, we can re-use the exported opengraph-image
-      // size config to also set the ImageResponse's width and height.
       ...size,
       fonts: [
         {
           name: "Inter",
-          data: await interSemiBold,
+          data: await interFont,
           style: "normal",
-          weight: 600,
-        },
-        {
-          name: "Inter",
-          data: await interLight,
-          style: "normal",
-          weight: 300,
-        },
+          weight: 400,
+        }
       ],
     },
   );
