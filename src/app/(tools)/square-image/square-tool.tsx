@@ -3,7 +3,6 @@
 import { usePlausible } from "next-plausible";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import { UploadBox } from "@/components/shared/upload-box";
-import { OptionSelector } from "@/components/shared/option-selector";
 import { FileDropzone } from "@/components/shared/file-dropzone";
 import {
   type FileUploaderResult,

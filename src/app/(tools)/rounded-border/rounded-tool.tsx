@@ -3,8 +3,7 @@ import { usePlausible } from "next-plausible";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import { UploadBox } from "@/components/shared/upload-box";
-import { OptionSelector } from "@/components/shared/option-selector";
-import { BorderRadiusSelector } from "@/components/border-radius-selector";
+
 import {
   useFileUploader,
   type FileUploaderResult,
