@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 import Link from "next/link";
 
 const Home = () => {
@@ -8,12 +8,11 @@ const Home = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 p-8 font-[family-name:var(--font-geist-sans)] sm:p-20">
       <main className="mx-auto max-w-6xl">
         {/* Header */}
-        <div className="mb-16 text-center animate-fade-in">
-          <h1 className="mb-4 text-5xl font-bold text-indigo-900">
-            EasyPicZ
-          </h1>
-          <p className="text-lg text-gray-600 animate-fade-in-delayed">  
-            I buid these tools because the exisitng online tools are not that good ( for me :) 
+        <div className="animate-fade-in mb-16 text-center">
+          <h1 className="mb-4 text-5xl font-bold text-indigo-900">EasyPicZ</h1>
+          <p className="animate-fade-in-delayed text-lg text-gray-600">
+            I buid these tools because the exisitng online tools are not that
+            good ( for me :)
           </p>
         </div>
 
@@ -21,8 +20,8 @@ const Home = () => {
         <div className="grid gap-8 md:grid-cols-3">
           {/* SVG to PNG Converter */}
           <Link href="/svg-to-png" className="group">
-            <div className="h-full rounded-xl bg-white p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:translate-y-[-4px]">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+            <div className="h-full rounded-xl bg-white p-6 shadow-lg transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-600 transition-colors duration-300 group-hover:bg-blue-600 group-hover:text-white">
                 <span className="text-2xl">🖼️</span>
               </div>
               <h2 className="mb-2 text-xl font-semibold text-gray-800">
@@ -36,8 +35,8 @@ const Home = () => {
 
           {/* Square Image Generator */}
           <Link href="/square-image" className="group">
-            <div className="h-full rounded-xl bg-white p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:translate-y-[-4px]">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+            <div className="h-full rounded-xl bg-white p-6 shadow-lg transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100 text-indigo-600 transition-colors duration-300 group-hover:bg-indigo-600 group-hover:text-white">
                 <span className="text-2xl">⬛</span>
               </div>
               <h2 className="mb-2 text-xl font-semibold text-gray-800">
@@ -51,8 +50,8 @@ const Home = () => {
 
           {/* Corner Rounder */}
           <Link href="/rounded-border" className="group">
-            <div className="h-full rounded-xl bg-white p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:translate-y-[-4px]">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-purple-100 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
+            <div className="h-full rounded-xl bg-white p-6 shadow-lg transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-purple-100 text-purple-600 transition-colors duration-300 group-hover:bg-purple-600 group-hover:text-white">
                 <span className="text-2xl">📐</span>
               </div>
               <h2 className="mb-2 text-xl font-semibold text-gray-800">
@@ -68,8 +67,14 @@ const Home = () => {
 
       <style jsx>{`
         @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
         .animate-fade-in {
           animation: fadeIn 0.8s ease-out forwards;

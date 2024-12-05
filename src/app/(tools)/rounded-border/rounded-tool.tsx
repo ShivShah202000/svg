@@ -79,7 +79,11 @@ interface ImageRendererProps {
   background: BackgroundOption;
 }
 
-const ImageRenderer = ({ imageContent, radius, background }: ImageRendererProps) => {
+const ImageRenderer = ({
+  imageContent,
+  radius,
+  background,
+}: ImageRendererProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -101,11 +105,11 @@ const ImageRenderer = ({ imageContent, radius, background }: ImageRendererProps)
         src={imageContent}
         alt="Preview"
         className="relative"
-        style={{ 
-          width: "100%", 
-          height: "auto", 
+        style={{
+          width: "100%",
+          height: "auto",
           objectFit: "contain",
-          borderRadius: `${radius}px`
+          borderRadius: `${radius}px`,
         }}
       />
     </div>
@@ -176,7 +180,7 @@ function RoundedToolCore(props: { fileUploaderProps: FileUploaderResult }) {
           <h1 className="mb-8 text-center text-3xl font-bold text-[#27175D]">
             Corner Rounder
           </h1>
-          
+
           <div className="mx-auto w-full max-w-2xl">
             <div className="w-full rounded-xl bg-white p-8 shadow-sm">
               <UploadBox
@@ -199,7 +203,7 @@ function RoundedToolCore(props: { fileUploaderProps: FileUploaderResult }) {
         <h1 className="mb-8 text-center text-3xl font-bold text-[#27175D]">
           Corner Rounder
         </h1>
-        
+
         <div className="mx-auto w-full max-w-4xl rounded-xl bg-white p-6 shadow-sm">
           <div className="flex flex-col items-center gap-6">
             {/* Preview Section */}
@@ -219,7 +223,9 @@ function RoundedToolCore(props: { fileUploaderProps: FileUploaderResult }) {
             {/* Image Size */}
             <div className="w-full rounded-lg bg-gray-50 p-4">
               <div className="text-center">
-                <span className="text-sm font-medium text-gray-900">Image Size</span>
+                <span className="text-sm font-medium text-gray-900">
+                  Image Size
+                </span>
                 <p className="mt-1 font-medium text-gray-700">
                   {imageMetadata.width} × {imageMetadata.height}
                 </p>

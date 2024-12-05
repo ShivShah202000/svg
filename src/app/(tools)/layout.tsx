@@ -35,9 +35,7 @@ export default function ToolsLayout({
   return (
     <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
       <BackButton />
-      <main className="flex flex-grow flex-col">
-        {children}
-      </main>
+      <main className="flex flex-grow flex-col">{children}</main>
     </div>
   );
 }

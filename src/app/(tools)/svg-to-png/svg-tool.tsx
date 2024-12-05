@@ -146,7 +146,7 @@ function SVGToolCore(props: { fileUploaderProps: FileUploaderResult }) {
           <h1 className="mb-8 text-center text-3xl font-bold text-[#27175D]">
             SVG to PNG Converter
           </h1>
-          
+
           <div className="mx-auto w-full max-w-2xl">
             <div className="w-full rounded-xl bg-white p-8 shadow-sm">
               <UploadBox
@@ -168,7 +168,7 @@ function SVGToolCore(props: { fileUploaderProps: FileUploaderResult }) {
         <h1 className="mb-8 text-center text-3xl font-bold text-[#27175D]">
           SVG to PNG Converter
         </h1>
-        
+
         <div className="mx-auto w-full max-w-4xl rounded-xl bg-white p-6 shadow-sm">
           <div className="flex flex-col items-center gap-6">
             {/* Preview Section */}

@@ -70,7 +70,7 @@ function SquareToolCore(props: { fileUploaderProps: FileUploaderResult }) {
           <h1 className="mb-8 text-center text-3xl font-bold text-[#27175D]">
             Square Image Generator
           </h1>
-          
+
           <div className="mx-auto w-full max-w-2xl">
             <div className="w-full rounded-xl bg-white p-8 shadow-sm">
               <UploadBox
@@ -78,7 +78,8 @@ function SquareToolCore(props: { fileUploaderProps: FileUploaderResult }) {
                 subtitle="Drag and drop your image here, or click to upload"
                 description="Upload Image"
                 accept="image/*"
-                onChange={handleFileUploadEvent}              />
+                onChange={handleFileUploadEvent}
+              />
             </div>
           </div>
         </div>
@@ -92,16 +93,16 @@ function SquareToolCore(props: { fileUploaderProps: FileUploaderResult }) {
         <h1 className="mb-8 text-center text-3xl font-bold text-[#27175D]">
           Square Image Generator
         </h1>
-        
+
         <div className="mx-auto w-full max-w-4xl rounded-xl bg-white p-6 shadow-sm">
           <div className="flex flex-col items-center gap-6">
             {/* Preview Section */}
             <div className="w-full rounded-lg border border-gray-100 bg-gray-50 p-4">
               {squareImageContent && (
-                <img 
-                  src={squareImageContent} 
-                  alt="Preview" 
-                  className="mx-auto max-h-[400px] object-contain" 
+                <img
+                  src={squareImageContent}
+                  alt="Preview"
+                  className="mx-auto max-h-[400px] object-contain"
                 />
               )}
               <p className="mt-2 text-center text-sm text-gray-600">
@@ -130,12 +131,16 @@ function SquareToolCore(props: { fileUploaderProps: FileUploaderResult }) {
             {/* Background Color Selector */}
             <div className="w-full rounded-lg bg-gray-50 p-4">
               <div className="flex flex-col gap-2">
-                <span className="text-sm font-medium text-gray-900">Background Color</span>
+                <span className="text-sm font-medium text-gray-900">
+                  Background Color
+                </span>
                 <div className="flex gap-2">
                   {["white", "black"].map((color) => (
                     <button
                       key={color}
-                      onClick={() => setBackgroundColor(color as "white" | "black")}
+                      onClick={() =>
+                        setBackgroundColor(color as "white" | "black")
+                      }
                       className={`flex-1 rounded-md px-4 py-2 text-sm font-medium transition-all ${
                         backgroundColor === color
                           ? "bg-[#27175D] text-white"
